@@ -1,0 +1,21 @@
+<h1>Olá mundo</h1>
+<p>{{ title }}</p>
+
+<button (click)="aoClicarBotao()">Incrementar</button>
+<p>valor atual: {{ valorAtual }}</p>
+
+<input [(ngModel)]="nomePessoa" type="text" placeholder="Informe o seu nome">
+<h2>O nome digitado foi: {{ nomePessoa }}</h2> 
+
+<h2>Hora atual: {{ obterHoraAtual() }}</h2>
+<h3 *ngIf="jaENoite()">Boa noite</h3>
+<h3 *ngIf="jaETarde()">Boa tarde</h3>
+<h3 *ngIf="jaEDia()">Bom dia</h3>
+
+<hr>
+<h1>Nome das pessoas:</h1>
+<h3 *ngFor="let nome of nomes">
+   Aluno: {{ nome }}
+</h3>
+
+<a routerLink="/teste2/luis">link para teste 2</a>
